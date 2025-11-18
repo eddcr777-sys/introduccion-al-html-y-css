@@ -1,0 +1,222 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #0d1117;   
+    --secondary-color: #58a6ff; 
+    --background-color: #010409;
+
+
+    --text-color: #e6edf3;      
+    --header-footer-bg: #0d1117;
+
+    --border-color: #30363d;    
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+header, nav, main, footer {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--header-footer-bg);
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+    margin-top: 20px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+
+nav {
+    background: var(--primary-color);
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    max-width: 100%; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+nav ul li a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+
+main {
+    background-color: var(--header-footer-bg);
+    padding: 30px;
+    flex-grow: 1; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    color: var(--secondary-color);
+
+    margin-bottom: 15px;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 10px;
+}
+
+h3 {
+    color: var(--text-color);
+
+
+    margin-top: 25px;
+    margin-bottom: 10px;
+    
+    font-size: 1.2em;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid var(--border-color);
+    border-left: 0;
+    border-right: 0;
+}
+
+thead {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+th {
+    background-color: #161b22;
+    color: var(--secondary-color);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #161b22; 
+}
+
+tbody tr:hover {
+    background-color: #21262d;
+}
+
+code {
+    background-color: rgba(110, 118, 129, 0.4);
+    color: #c9d1d9;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+pre {
+    background-color: #2d2d2d;
+    color: #e1e1dc; 
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto; 
+    margin: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    margin-bottom: 20px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+footer .footer-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+footer .footer-link:hover {
+    background-color: #82c3ff; 
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header, main, footer {
+        padding: 15px;
+        margin-top: 0;
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+}

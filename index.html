@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        
+        <meta charset="UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Introducción a HTML</title>
+        
+        <link rel="stylesheet" href="CSS.css">
+    
+    </head>
+    
+    <body>
+    
+        <header>
+
+            
+            <h1>Introducción a HTML</h1>
+            
+            <p>Aquí encontrarás información sobre la estructura, etiquetas, semántica, atributos y valores de HTML.</p>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="#Que es?">Que es HTML?</a></li>
+          
+                <li><a href="#Historia">Su Historia</a></li>
+          
+
+                <li><a href="#estructura">Estructura</a></li>
+          
+
+                <li><a href="#etiquetas">Etiquetas</a></li>
+          
+                <li><a href="#semantica">Semántica</a></li>
+          
+                <li><a href="#atributos">Atributos y Valores</a></li>
+            </ul>
+        </nav>
+
+
+        <main>
+            <section id="Que es HTML?">
+                <h2>Que es HTML?</h2>
+                <p> HTML es un lenguaje de marcado que utiliza una serie de etiquetas para definir distintos tipos de contenido en una página web. Cada etiqueta tiene un propósito específico, como definir encabezados, párrafos, listas, enlaces, e imágenes. Los navegadores web interpretan estas etiquetas para mostrar el contenido de manera visual.</p>
+                </section>
+
+                <section id="Su Historia">
+                    <h2>Su Historia</h2>
+                    <p>La evolución de HTML ha sido fundamental para el desarrollo de la web. Su historia se puede resumir en las siguientes etapas clave:
+1. Creación (1989-1991)
+Tim Berners-Lee, un físico del CERN, inventó HTML en 1989 como parte de la creación de la World Wide Web.
+La primera versión se conocía como “HTML 1.0” y contenía un conjunto limitado de etiquetas.
+2. HTML 2.0 (1995)
+Se formalizó en 1995 como HTML 2.0, el primer estándar oficial, que incluyó más etiquetas y mejoras de funcionalidades.
+3. HTML 3.2 (1997)
+Introducidos nuevos elementos como tablas y applets.
+Adoptado por el World Wide Web Consortium (W3C) que se encargaba de estandarizar el lenguaje.
+4. HTML 4.01 (1999)
+Se publicó en diciembre de 1999, consolidando muchos de los elementos de versiones anteriores y permitiendo un mejor soporte multimedia.
+Se separaron las preocupaciones de contenido y presentación, promoviendo el uso de CSS.
+5. XHTML 1.0 (2000)
+Se introdujo XHTML como una reformulación de HTML 4.01 usando la sintaxis de XML, lo que obligó a una mayor rigurosidad en el marcado.
+6. HTML5 (2014)
+HTML5 fue desarrollado para abordar las limitaciones de versiones anteriores y mejorar la compatibilidad con dispositivos móviles.
+Incluyó soporte para multimedia (audio y video), gráficos, y nuevas APIs.
+HTML5 se convirtió en un estándar en 2014 y continúa evolucionando con mejoras y nuevas features.</p>
+
+                </section>
+            <section id="estructura">
+                <h2>1. Estructura de un Documento HTML</h2>
+                <p>Estructura Básica de un Documento HTML
+Un documento HTML típico sigue una estructura básica que incluye los siguientes elementos:</p>
+
+<table>
+    <thead><tr>
+        <th>Elemento</th>
+        <th>Descripción</th>
+
+    </tr>
+</thead>
+    <tbody>
+
+        <tr><td><code>&lt;!DOCTYPE html&gt;</code></td>
+            <td>Declara el tipo de documento y la versión de HTML.</td></tr>
+
+
+            <tr><td><code>&lt;html</html>&gt;</code></td>
+                <td>Elemento raíz que contiene todo el contenido del documento.</td>
+            </tr>
+
+            <tr><td><code>&lt;head&gt;</code></td>
+            <td> Contiene metadatos, enlaces a estilos, scripts, etc.</td></tr>
+
+            <tr><td><code>&lt;title&gt;</code></td>
+            <td>Define el título de la página.</td></tr>
+
+            <tr><td><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></td>
+            <td>Asegura que el diseño sea responsivo, ajustando el ancho a la del dispositivo.</td>
+            </tr>
+
+
+            <tr><td><code>&lt;meta charset="UTF-8"&gt;</code></td>
+            <td> Define la codificación de caracteres del documento como UTF-8, que admite una amplia gama de caracteres.</td></tr>
+
+            <tr><td><code>&lt;link rel="stylesheet" href="estilos.css"&gt;</code></td>
+                <td>Vincula un archivo CSS externo para dar estilo al documento.</td>
+            </tr>
+
+            <tr><td><code>&lt;body&gt;</code></td>
+            <td>Contiene todo el contenido visual de la página que se presentará a los usuarios.</td></tr>
+
+
+
+
+
+
+
+    </tbody>
+</table>
+
+
+
+
+            <section id="etiquetas">
+                <h2>2. Etiquetas HTML</h2>
+                <p>Las etiquetas HTML se utilizan para estructurar el contenido. A continuación, se enumeran algunas etiquetas comunes junto con su significado semántico:</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Etiqueta</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+
+
+
+
+                        <tr>
+                            <td>
+                                <code>
+                                    &lt;h1&gt;
+                                </code> - 
+                                <code>
+                                    &lt;h6&gt;
+
+                                </code>
+                            </td>
+
+                            <td>Encabezados, donde <code>&lt;h1&gt;</code> es el más importante y <code>&lt;h6&gt;</code> el menos.</td>
+                        </tr>
+
+                        
+                        <tr>
+                            <td>
+                                <code>
+                                    &lt;p&gt;</code>
+                                </td>
+
+                                <td>Define un párrafo.</td>
+                            </tr>
+
+
+                        <tr><td><code>&lt;a&gt;</code></td><td>Crea un enlace.</td></tr>
+                        <tr><td><code>&lt;img&gt;</code></td><td>Inserta una imagen.</td></tr>
+
+
+                        <tr><td><code>&lt;ul&gt;</code></td><td>Lista desordenada.</td></tr>
+
+                        <tr><td><code>&lt;ol&gt;</code></td><td>Lista ordenada.</td></tr>
+
+                        <tr><td><code>&lt;li&gt;</code></td><td>Elemento de una lista.</td></tr>
+
+
+
+                        <tr><td><code>&lt;div&gt;</code></td><td>Contenedor genérico para agrupar contenido.</td></tr>
+
+
+                        <tr><td><code>&lt;span&gt;</code></td><td>Contenedor en línea, generalmente para estilizar.</td></tr>
+
+
+
+                        <tr><td><code>&lt;header&gt;</code></td><td>Encabezado de una sección o de todo el documento.</td></tr>
+
+                        <tr><td><code>&lt;footer&gt;</code></td><td>Pie de página de una sección o de todo el documento.</td></tr>
+
+
+                        
+                        <tr><td><code>&lt;article&gt;</code></td><td>Contenido independiente en un documento.</td></tr>
+
+                        <tr><td><code>&lt;section&gt;</code></td><td>Sección temática dentro de un documento.</td></tr>
+
+                        <tr><td><code>&lt;aside&gt;</code></td><td>Contenido relacionado pero separado del contenido principal.</td></tr>
+
+                        <tr><td><code>&lt;form&gt;</code></td><td>Formulario para recopilación de datos.</td></tr>
+
+                        <tr><td><code>&lt;input&gt;</code></td><td>Campo de entrada en un formulario.</td></tr>
+
+                        <tr><td><code>&lt;button&gt;</code></td><td>Botón interactivo.</td></tr>
+
+                        <tr><td><code>&lt;table&gt;</code></td><td>Crea una tabla.</td></tr>
+                        <tr><td><code>&lt;tr&gt;</code></td><td>Fila en una tabla.</td></tr>
+
+                        <tr><td><code>&lt;td&gt;</code></td><td>Celda de una tabla.</td></tr>
+
+                        <tr><td><code>&lt;th&gt;</code></td><td>Encabezado de una celda en una tabla.</td></tr>
+
+                        <tr><td><code>&lt;blockquote&gt;</code></td><td>Cita en bloque.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="semantica">
+                <h2>3.Semántica en HTML</h2>
+                <p>Semántica en HTML
+La semántica en HTML se refiere al uso de etiquetas que tienen significados claros y específicos sobre el tipo de contenido que representan. Al utilizar etiquetas semánticas, se mejora la accesibilidad, el SEO (optimización para motores de búsqueda) y la mantenibilidad del código. A continuación, se detalla la importancia y las principales etiquetas semánticas en HTML.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Etiqueta</th>
+                                <th>Significado</th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>&lt;header&gt;</code></td>
+                                <td>Encabezado de una sección o de todo el documento.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code>&lt;nav&gt;</code></td>
+                                <td>Menú de navegación.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code>&lt;article&gt;</code></td>
+                                <td>Contenido independiente en un documento.</td>
+                            </tr>
+
+                            <tr>
+                                <td><code>&lt;section&gt;</code></td> 
+                                <td>Sección temática dentro de un documento.</td>
+                            </tr>
+
+                           <tr>
+                            <td>
+                                <code>
+                                    &lt;footer&gt;</code>
+                            </td>
+                            <td>Pie de página de una sección o de todo el documento.</td>
+
+                           </tr>  
+                           <tr><td><code>&lt;main&gt;</code></td>
+                            <td>Contenido principal de una página.</td>
+                        </tr>   
+                        <tr><td><code>&lt;aside&gt;</code></td>
+                        <td>Contenido relacionado, pero separado del contenido principal.</td></tr>
+
+                        <tr>
+                            <td><code>&lt;figure&gt;</code></td>
+                            <td>Representación gráfica o ilustrativa con caption.</td>
+                        </tr>
+                        <tr><td><code>&lt;figcaption&gt;</code></td>
+                        <td>Título o descripción de la figura.</td></tr>
+
+
+
+                    </table>
+            </section>
+
+            <section id="atributos">
+                <h2>4. Atributos y Valores</h2>
+                <p>Los atributos proporcionan información adicional sobre los elementos HTML y siempre se especifican en la etiqueta de apertura. Algunos de los atributos más comunes son:</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Atributo</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                   
+                        <tr><td><code>id</code></td><td>Identificador único para un elemento.</td></tr>
+                   
+                        <tr><td><code>class</code></td><td>Define una o más clases para aplicar estilos.</td></tr>
+                   
+                        <tr><td><code>style</code></td><td>Aplica estilos CSS en línea.</td></tr>
+                   
+                        <tr><td><code>src</code></td><td>Fuente de un recurso, como una imagen o un script.</td></tr>
+                   
+                        <tr><td><code>href</code></td><td>URL de destino para un enlace.</td></tr>
+                   
+                        <tr><td><code>alt</code></td><td>Texto alternativo para imágenes.</td></tr>
+                   
+                   
+                        <tr><td><code>title</code></td><td>Texto que aparece como un tooltip.</td></tr>
+                   
+                        <tr><td><code>value</code></td><td>Valor de un campo de entrada.</td></tr>
+                   
+                        <tr><td><code>placeholder</code></td><td>Texto mostrado en un campo de entrada cuando está vacío.</td></tr>
+                   
+                   
+                   
+                        <tr><td><code>disabled</code></td><td>Indica que un campo de entrada está deshabilitado.</td></tr>
+                   
+                    </tbody>
+                
+                </table>
+            
+            </section>
+        </main>
+
+        <footer>
+            <p>Informe sobre HTML - Creado por [Henyer Guipe, Elvis Cordova, Luis Ruiz, Jesus Giraldo, Oscar Arcia]</p>
+            <a href="introduccionCss.html" class="footer-link">Ver informe de CSS</a>
+        </footer>
+
+        <script>
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+               
+                anchor.addEventListener('click', function (e) {
+               
+                    e.preventDefault();
+        
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
+ 
+ 
+    </body>
+</html>

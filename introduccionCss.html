@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Introducción a CSS</title>
+        <link rel="stylesheet" href="CSS.css">
+    </head>
+    <body>
+        <header>
+            <h1>Introducción a CSS</h1>
+            <p>Aquí encontrarás información sobre los selectores, propiedades,Box Model, FlexBox y Grid. </p>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="#que-es-css">¿Qué es CSS?</a></li>
+         
+                <li><a href="#historia-css">Su Historia</a></li>
+         
+                <li><a href="#estructura">Estructura</a></li>
+         
+                <li><a href="#selectores">Selectores</a></li>
+         
+                <li><a href="#propiedades">Propiedades</a></li>
+         
+                <li><a href="#box-model">Box Model</a></li>
+         
+                <li><a href="#flexbox">Flexbox</a></li>
+         
+                <li><a href="#grid">Grid</a></li>
+            </ul>
+        </nav>
+
+        <main>
+          
+            <section id="que-es-css">
+                <h2>¿Qué es CSS?</h2>
+                <p>CSS es un lenguaje que proporciona mecanismos para aplicar estilos a los elementos HTML en una página web. Facilita la creación de un diseño visual atractivo y uniforme a través de propiedades que permiten definir cómo se mostrarán los diversos elementos en diferentes dispositivos y resoluciones de pantalla.
+                </p>
+
+
+            </section>
+
+            
+            <section id="historia-css">
+                <h2>Su Historia</h2>
+                <p>
+                    Historia de CSS
+La evolución de CSS ha sido crucial para el crecimiento y la funcionalidad de la web. Aquí se resumen las etapas clave en la historia de CSS:
+
+1. CSS1 (1996)
+La primera versión, CSS1, fue publicada por el W3C en diciembre de 1996. Estableció una serie de propiedades básicas para el control del diseño visual, como colores, fuentes y márgenes.
+2. CSS2 (1998)
+CSS2 fue lanzado en mayo de 1998 e introdujo nuevas características como el soporte para posicionamiento, media queries (consultas de medios) y estilos para documentos impresos.
+
+3. CSS2.1 (2004)
+CSS2.1 fue una revisión de CSS2 para corregir problemas y clarificar especificaciones. Se convirtió en un estándar más robusto para los desarrolladores.
+4. CSS3 (2009-presente)
+CSS3 se desarrolló de manera modular, lo que permitió la introducción de nuevas características y propiedades de forma más rápida. Incluye módulos para selecciones, bordes, sombras, gradientes, animaciones y flexbox.
+Con CSS3, se mejoró la capacidad de crear diseños sofisticados y responsivos.
+ </p>
+
+</section>
+
+<section id="estructura">
+    <h2>Estructura</h2>
+
+    <p>El CSS se puede incluir en un documento HTML de tres maneras:</p>
+
+     <h3>Inline</h3>
+     <p>Estilos aplicados directamente en los elementos HTML mediante el atributo "style":</p>
+<pre><code>&lt;p style="color: red;"&gt;Este es un párrafo rojo.&lt;/p&gt;
+</code></pre>
+
+<h3>Interno</h3>
+<p>Estilos definidos dentro de una etiqueta <code>&lt;style&gt;</code> en el <code>&lt;head&gt;</code>:</p>
+
+<pre><code>&lt;head&gt;
+    &lt;style&gt;
+        p {
+            color: blue;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+</code></pre>
+
+<h3>Externo</h3>
+<p>Estilos vinculados a un archivo CSS externo mediante la etiqueta 
+    <code>&lt;link&gt;</code> en el
+ <code>&lt;head&gt;</code>:</p>
+<pre><code>
+    &lt;head&gt;
+        &lt;link rel="stylesheet" href="estilos.css"&gt;
+    &lt;/head&gt;
+</code></pre>
+
+
+    </section>
+
+    <section id="selectores">
+        <h2>Selectores</h2>
+        <p>Los selectores permiten aplicar estilos a elementos específicos en función de sus etiquetas, clases, identificadores o atributos.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo De Selector</th>
+                    <th>Ejemplo</th>
+                    <th>Descripcion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Selector de etiqueta</td>
+                <td>p { color: red; }
+                </td>
+                <td>Selecciona todos los parrafos</td>
+            </tr>
+
+            <tr><td>Selector de Clase</td>
+                <td>.mi-clase { font-size: 16px; }</td>
+                <td>Selecciona todos los elementos con la clase "mi-clase"</td>
+
+            </tr>
+            <tr><td>Selector de Identificador</td>
+                <td>#mi-elemento { background-color: blue; }</td>
+                <td>Selecciona el elemento con el identificador "#mi-elemento"</td>
+            </tr>
+            <tr><td>Selector de Atributo</td>
+            <td>
+                [type="text"] { border: 1px solid black; }
+            </td>
+        <td>Selecciona elementos con un atributo específico.</td>
+    </tr> 
+    <tr>
+        <td>Selectores Compuestos</td>
+        <td>h1, h2, h3 { margin: 0; }</td>
+    
+        <td>Selecciona todos los elementos h1, h2 y h3.</td>
+    </tr>
+
+    <tr><td>Selectores Descendientes</td>
+    <td>ul li { list-style-type: none; }</td>
+    <td>Aplica estilos a elementos hijos.</td>
+</tr>
+            </tbody>
+        
+
+        </table>
+    </section>
+
+    <section id="propiedades">
+        <h2>Propiedades</h2>
+        <p>Las propiedades son características que definen el estilo de los elementos. Algunas de las propiedades más comunes incluyen:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Propiedad</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr><td>
+                    color
+                </td><td>
+                    Define el color del texto.
+                </td></tr>
+                <tr><td>
+                    background-color
+                </td><td>
+                    Define el color de fondo.
+                </td></tr>
+                <tr><td>
+                    font-family
+                </td><td>
+                    Especifica la fuente de texto.
+                </td></tr>
+                <tr><td>
+                    font-size
+                </td><td>
+                    Define el tamaño de la fuente.
+                </td></tr>
+
+                <tr><td>
+                    text-align
+                </td><td>
+                    Alinea el texto.
+                </td></tr>
+                <tr><td>
+                    border
+                </td><td>
+                    Define el borde del elemento.
+                </td></tr>
+                <tr><td>
+                    padding
+                </td><td>
+                    Agrega espacio interno al elemento.
+                </td></tr>
+                <tr><td>
+                    margin
+                </td><td>
+                    Agrega espacio externo al elemento.
+                </td></tr>
+                <tr><td>
+                    width
+                </td><td>
+                    Define el ancho del elemento.
+                </td></tr>
+
+                <tr><td>
+                    height
+    
+                </td><td>
+                    Define la altura del elemento.
+                </td></tr>
+                <tr><td>
+                    display
+                </td><td>
+                    Define cómo se mostrará el elemento.
+                </td></tr>
+                <tr><td>
+                    position
+                </td><td>
+                    Define la posición del elemento.
+                </td></tr>
+                <tr><td>
+                    top
+    
+                </td><td>
+                    Define la posición vertical del elemento.
+                </td></tr>
+                <tr><td>
+                    left
+                </td><td>
+                    Define la posición horizontal del elemento.
+                </td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="box-model">
+        <h2>Box Model</h2>
+        <p>El modelo de cajas es un concepto fundamental en CSS que describe cómo se estructuran y representan los elementos en una página web. Cada elemento HTML es representado como una caja rectangular, y este modelo define cómo se gestionan el margen, el borde, el relleno y el contenido.</p>
+
+        <h4>Componentes del Modelo de Cajas:</h4>
+        <p>
+            <h5>Contenido:</h5>
+Es el área donde se encuentra el texto, las imágenes o cualquier otro elemento. Las dimensiones de esta área se pueden controlar con las propiedades <b>width</b> y <b>height</b>.
+
+        </p>
+
+        <h5>Padding (Relleno):
+</h5>
+<p>
+    El espacio entre el contenido y el borde de la caja. El <b>padding</b> se define con las propiedades <b>padding-top</b>, <b>padding-right</b>, <b>padding-bottom</b> y <b>padding-left</b>.
+</p>
+
+<h5>Border (Borde):</h5>
+<p> puede definir de manera individual para cada lado: <b>border-top</b>, <b>border-right</b>, <b>border-bottom</b> y <b>border-left</b>
+Impacta en el tamaño total de la caja.
+</p>
+
+<h5> Margin (Margen):</h5> <p>
+El espacio fuera del borde que separa el elemento de otros elementos. Al igual que el padding, se puede definir para cada lado de manera independiente: <b>margin-top</b>, <b>margin-right</b>, <b>margin-bottom</b> y <b>margin-left</b>.</p>
+
+       <h3>Cálculo del Tamaño Total</h3>
+       <p>Para calcular el tamaño total de un elemento en el modelo de cajas, se debe sumar el contenido, el relleno, el borde y el margen:
+        </p>
+        <p>
+        Tamañototal=width+padding(izq+der)+border(izq+der)+margin(izq+der)</p>
+
+        <h4>Ejemplo:</h4>
+
+      <pre><code>.box {
+
+    width: 200px;              /* Ancho del contenido */
+
+    padding: 20px;            /* Espacio interno */
+
+    border: 5px solid black;  /* Borde */
+
+    margin: 10px;            /* Espacio externo */
+
+}
+      </code></pre>
+
+      <p>En este caso, el tamaño total de la caja será:
+200+20×2+5×2+10×2=200+40+10+20=280px</p>
+
+    </section>
+
+    <section id="flexbox">
+        <h2>Flexbox</h2>
+        <p>Flexbox (Flexible Box Layout) es un modelo de diseño en CSS que facilita la creación de diseños unidimensionales, permitiendo organizar los elementos dentro de un contenedor de manera flexible. Este modelo es especialmente útil para centrar contenido y distribuir espacio entre elementos de forma dinámica.</p>
+
+        <h3>Propiedades Clave de Flexbox:</h3>
+        <h5>Contenedor Flex:</h5>
+        <p>Para activar el flexbox, se debe asignar <b>display: flex</b> o <b>display: inline-flex;</b> al contenedor, lo que convierte todos los elementos hijos en elementos flexibles.</p>
+        <h5>Ejemplo:</h5>
+        <pre><code>.contenedor {
+    display: flex;
+}
+</code></pre>
+
+
+<h3>flex-direction:</h3>
+Define la dirección de los elementos en el contenedor. Puede tomar valores como: 
+
+<table>
+    <thead>
+        <tr>
+            <th>Valor</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td>row (predeterminado):</td> <td>Los elementos se organizan en fila.
+</td></tr>
+
+<tr>
+<td>column:</td> <td>Los elementos se organizan en columna.
+</td></tr>
+
+<tr>
+<td>
+row-reverse: </td> <td> Los elementos se organizan en fila pero en orden inverso. </td></tr>
+
+<tr>
+<td>
+column-reverse:</td> <td>Los elementos se organizan en columna pero en orden inverso. </td></tr>
+</table>
+
+
+<h5>Ejemplo:</h5>
+<pre><code>.contenedor {
+    flex-direction: row; /* o column, row-reverse, column-reverse */
+}
+</code></pre>
+
+
+<h3>justify-content:</h3>
+<p>Alinea los elementos a lo largo del eje principal (horizontal o vertical dependiendo de flex-direction):</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Valor</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td>flex-direction:</td> <td>Alinea al inicio.
+</td></tr>
+
+<tr>
+<td>flex-end:</td> <td>Alinea al final.
+</td></tr>
+
+<tr>
+<td>center:</td> <td>Alinea al centro.
+</td></tr>
+
+<tr>
+<td>space-between:</td> <td> Espacio igual entre los elementos. </td></tr>
+
+<tr>
+<td>space-around:</td> <td> Espacio igual alrededor de los elementos. </td></tr>
+</table>
+
+<h5>Ejemplo:</h5>
+<pre><code>.contenedor {
+    justify-content: center; /* o flex-start, flex-end, space-between, space-around */
+}
+</code></pre>
+
+<h3>align-items:</h3>
+<p>La propiedad align-items alinea los elementos flexibles a lo largo del eje transversal (vertical si la dirección es row, horizontal si es column). Aquí están los valores más comunes:</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+            valor
+        </th>
+        <th>
+            descripcion
+        </th></tr>
+    </thead>
+    <tbody>
+        <tr>
+<td>flex-start:</td> <td>Alinea al inicio.
+</td></tr>
+
+<tr>
+<td>flex-end:</td> <td>Alinea al final.
+</td></tr>
+
+<tr>
+<td>center:</td> <td>Alinea al centro.
+</td>
+<tr>
+    <td>
+    stretch:
+    </td><td>
+        Los elementos ocupan toda la altura del contenedor flex.
+    </td>
+</tr>
+<tr><td>baseline:</td>
+<td>
+    Los elementos se alinean según la línea base de su texto.
+</td></tr>
+    </tbody>
+</table>
+
+<h5>Ejemplo:</h5>
+<pre><code>.contenedor {
+    align-items: center; /* o flex-start, flex-end, baseline, stretch */
+}
+</code></pre>
+
+    </section>
+
+    <section id="grid">
+        <h2>Grid</h2>
+        <p>CSS Grid Layout es un sistema de diseño bidimensional que permite organizar elementos en columnas y filas, proporcionando un control completo sobre el diseño de la página web. Es especialmente útil para crear layouts complejos y responsivos de manera eficiente.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Propiedad</th>
+                    <th>Descripción</th>
+                    <th>Ejemplo</th>
+                </tr></tr>
+            </thead>
+            <tbody>
+                <tr><td>grid-template-columns:</td>
+                    <td>
+                        Define las columnas del grid.
+                    </td> <td>
+                        .contenedor {
+    display: grid;
+}
+
+                    </td>
+
+                </tr>
+                <tr><td>grid-template-rows:</td>
+                    <td>
+                        Define las filas del grid.
+                    </td>
+                    <td>
+                        .contenedor {
+    grid-template-columns: 1fr 2fr; /* Dos columnas: 1 parte y 2 partes */
+    grid-template-rows: auto 100px;  /* Dos filas: primera automática y segunda de 100px */
+}
+
+
+                    </td>
+                </tr>
+                    <tr><td>
+                        grid-template-areas:
+                    </td><td>
+                        Define las áreas del grid.
+                    </td>
+                    <td>
+                       .contenedor {
+    gap: 10px; /* Espacio entre elementos */
+}
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td>
+                            grid-gap:
+                        </td><td>
+                            Define el espacio entre los elementos.
+                        </td>
+                        <td>
+                           .elemento {
+    grid-area: cabecera; /* Coloca este elemento en la área 'cabecera' */
+}
+
+
+                        </td>
+
+
+                    </tr>
+
+
+
+            </tbody>
+        </table>
+    </section>
+
+        </main>
+        
+
+        <footer>
+            <p>Informe sobre CSS - Creado por [Henyer Guipe, Luis Ruiz, Elvis Cordova, Jesus Giraldo, Oscar Arcia]</p>
+            <a href="index.html" class="footer-link">Ver informe de HTML</a>
+        </footer>
+
+        <script>
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+        
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
+</body>
+</html>
