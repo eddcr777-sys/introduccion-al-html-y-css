@@ -4,8 +4,7 @@
         
         <meta charset="UTF-8">
         
-        <!-- Políticas de Seguridad -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:;">
         <meta name="referrer-policy" content="strict-origin-when-cross-origin">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,10 +12,11 @@
         <title>Introducción a HTML</title>
         
         <link rel="stylesheet" href="CSS.css">
+        
     
     </head>
-    
-    <body>
+     
+    <body class="html-page">
     
         <header>
 
