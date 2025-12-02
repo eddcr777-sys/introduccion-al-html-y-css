@@ -250,8 +250,15 @@ footer .footer-link:hover {
 
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column;
+        /* Se mantiene horizontal como en PC */
         align-items: center;
+        /* Añadido padding vertical para la lista de navegación en móvil */
+        padding: 10px 0;
+    }
+
+    nav ul li a {
+        /* Aumentado el padding para mejorar el área de toque en móvil */
+        padding: 12px 20px;
     }
 
     header, main, footer {
