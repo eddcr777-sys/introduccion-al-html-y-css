@@ -215,6 +215,36 @@ Un documento HTML típico sigue una estructura básica que incluye los siguiente
                         <tr><td><code>&lt;th&gt;</code></td><td>Encabezado de una celda en una tabla.</td></tr>
 
                         <tr><td><code>&lt;blockquote&gt;</code></td><td>Cita en bloque.</td></tr>
+                        <tr><td><code>&lt;nav&gt;</code></td><td>Define un conjunto de enlaces de navegación.</td></tr>
+                        <tr><td><code>&lt;main&gt;</code></td><td>Especifica el contenido principal de un documento.</td></tr>
+                        <tr><td><code>&lt;figure&gt;</code></td><td>Agrupa contenido multimedia, como imágenes, con una leyenda (figcaption).</td></tr>
+                        <tr><td><code>&lt;figcaption&gt;</code></td><td>Define una leyenda para un elemento &lt;figure&gt;.</td></tr>
+                        <tr><td><code>&lt;details&gt;</code></td><td>Crea un widget de divulgación en el que la información solo es visible cuando se activa.</td></tr>
+                        <tr><td><code>&lt;summary&gt;</code></td><td>Define un encabezado visible para un elemento &lt;details&gt;.</td></tr>
+                        <tr><td><code>&lt;time&gt;</code></td><td>Define una fecha u hora específica.</td></tr>
+                        <tr><td><code>&lt;mark&gt;</code></td><td>Resalta parte del texto.</td></tr>
+                        <tr><td><code>&lt;progress&gt;</code></td><td>Muestra el progreso de una tarea.</td></tr>
+                        <tr><td><code>&lt;meter&gt;</code></td><td>Representa una medida escalar dentro de un rango conocido.</td></tr>
+                        <tr><td><code>&lt;label&gt;</code></td><td>Define una etiqueta para un elemento &lt;input&gt;.</td></tr>
+                        <tr><td><code>&lt;textarea&gt;</code></td><td>Define un control de entrada de texto de varias líneas.</td></tr>
+                        <tr><td><code>&lt;select&gt;</code></td><td>Crea una lista desplegable.</td></tr>
+                        <tr><td><code>&lt;option&gt;</code></td><td>Define una opción en una lista desplegable.</td></tr>
+                        <tr><td><code>&lt;optgroup&gt;</code></td><td>Agrupa opciones relacionadas en una lista desplegable.</td></tr>
+                        <tr><td><code>&lt;fieldset&gt;</code></td><td>Agrupa elementos relacionados en un formulario.</td></tr>
+                        <tr><td><code>&lt;legend&gt;</code></td><td>Define un título para un elemento &lt;fieldset&gt;.</td></tr>
+                        <tr><td><code>&lt;audio&gt;</code></td><td>Inserta contenido de audio.</td></tr>
+                        <tr><td><code>&lt;video&gt;</code></td><td>Inserta contenido de video.</td></tr>
+                        <tr><td><code>&lt;source&gt;</code></td><td>Define múltiples recursos de medios para &lt;video&gt; y &lt;audio&gt;.</td></tr>
+                        <tr><td><code>&lt;track&gt;</code></td><td>Especifica pistas de texto para &lt;video&gt; y &lt;audio&gt;.</td></tr>
+                        <tr><td><code>&lt;canvas&gt;</code></td><td>Se utiliza para dibujar gráficos a través de scripts (generalmente JavaScript).</td></tr>
+                        <tr><td><code>&lt;svg&gt;</code></td><td>Define un contenedor para gráficos vectoriales SVG.</td></tr>
+                        <tr><td><code>&lt;iframe&gt;</code></td><td>Incrusta otro documento HTML en la página actual.</td></tr>
+                        <tr><td><code>&lt;b&gt;</code></td><td>Pone el texto en negrita sin importancia semántica.</td></tr>
+                        <tr><td><code>&lt;i&gt;</code></td><td>Pone el texto en cursiva sin importancia semántica.</td></tr>
+                        <tr><td><code>&lt;u&gt;</code></td><td>Subraya el texto sin importancia semántica.</td></tr>
+                        <tr><td><code>&lt;strong&gt;</code></td><td>Indica que el texto tiene una gran importancia (se muestra en negrita).</td></tr>
+                        <tr><td><code>&lt;em&gt;</code></td><td>Enfatiza el texto (se muestra en cursiva).</td></tr>
+                        <tr><td><code>&lt;code&gt;</code></td><td>Define un fragmento de código de computadora.</td></tr>
                     </tbody>
                 </table>
             </section>
@@ -312,11 +342,46 @@ La semántica en HTML se refiere al uso de etiquetas que tienen significados cla
                    
                    
                         <tr><td><code>disabled</code></td><td>Indica que un campo de entrada está deshabilitado.</td></tr>
+                        <tr><td><code>target</code></td><td>Especifica dónde abrir el documento enlazado (ej. "_blank").</td></tr>
+                        <tr><td><code>readonly</code></td><td>Especifica que un campo de entrada es de solo lectura.</td></tr>
+                        <tr><td><code>required</code></td><td>Indica que un campo de formulario debe ser completado antes de enviarlo.</td></tr>
+                        <tr><td><code>checked</code></td><td>Especifica que un elemento de entrada debe estar preseleccionado.</td></tr>
+                        <tr><td><code>selected</code></td><td>Especifica que una opción en una lista desplegable debe estar preseleccionada.</td></tr>
+                        <tr><td><code>type</code></td><td>Define el tipo de un elemento, como un &lt;input&gt; o un &lt;button&gt;.</td></tr>
+                        <tr><td><code>for</code></td><td>Asocia una etiqueta &lt;label&gt; con un elemento de formulario.</td></tr>
+                        <tr><td><code>action</code></td><td>Especifica la URL a la que se enviarán los datos de un formulario.</td></tr>
+                        <tr><td><code>method</code></td><td>Define el método HTTP para enviar datos de un formulario (ej. "GET", "POST").</td></tr>
+                        <tr><td><code>lang</code></td><td>Especifica el idioma del contenido de un elemento.</td></tr>
                    
                     </tbody>
                 
                 </table>
             
+            </section>
+
+            <section id="ejemplos-formulario">
+                <h2>Ejemplos de Atributos de Formulario: `action` y `method`</h2>
+                <p>Los atributos <code>action</code> y <code>method</code> son cruciales para definir cómo y dónde se envían los datos de un formulario.</p>
+
+                <h3>Ejemplo con <code>method="GET"</code></h3>
+                <p>El método <code>GET</code> anexa los datos del formulario a la URL especificada en el atributo <code>action</code>. Es útil para formularios de búsqueda o cuando los datos no son sensibles, ya que los datos son visibles en la barra de direcciones del navegador. La longitud de la URL es limitada.</p>
+                <pre><code>&lt;form action="/buscar" method="get"&gt;
+    &lt;label for="busqueda"&gt;Buscar:&lt;/label&gt;
+    &lt;input type="text" id="busqueda" name="q"&gt;
+    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                <p>Si un usuario escribe "html" en el campo de búsqueda y envía el formulario, el navegador navegará a una URL como esta: <code>/buscar?q=html</code>.</p>
+
+                <h3>Ejemplo con <code>method="POST"</code></h3>
+                <p>El método <code>POST</code> envía los datos del formulario en el cuerpo de la solicitud HTTP. Es el método preferido para enviar datos sensibles (como contraseñas) o grandes cantidades de información, ya que los datos no son visibles en la URL.</p>
+                <pre><code>&lt;form action="/registrar" method="post"&gt;
+    &lt;label for="usuario"&gt;Usuario:&lt;/label&gt;
+    &lt;input type="text" id="usuario" name="usuario"&gt;
+    &lt;label for="clave"&gt;Contraseña:&lt;/label&gt;
+    &lt;input type="password" id="clave" name="clave"&gt;
+    &lt;button type="submit"&gt;Registrarse&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                <p>Al enviar este formulario, los datos <code>usuario</code> y <code>clave</code> se envían de forma oculta al script <code>/registrar</code> en el servidor para ser procesados.</p>
             </section>
         </main>
 
